@@ -1,0 +1,47 @@
+package practice;
+
+import org.openqa.selenium.Alert;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
+
+public class we2 {
+
+	public static void main(String[] args) throws InterruptedException {
+		
+		//System.setProperty("webdriver.chrome.driver", "D:\\10.Automation\\1.sampleProject\\DemoProject\\src\\main\\resources\\chromedriver.exe");
+		WebDriver driver= new ChromeDriver();
+		driver.manage().window().maximize();
+		
+		
+		driver.get("https://paytrailplus.com/");
+		
+		Thread.sleep(6000);
+		driver.findElement(By.xpath("//span[text()='Login']")).click();
+		
+		Thread.sleep(5000);
+		driver.findElement(By.xpath("//input[@id=\"fullName\"]")).sendKeys("8956488404");
+		driver.findElement(By.xpath("//input[@id=\"Password\"]")).sendKeys("Pass@123");
+		driver.findElement(By.xpath("//button[@type=\"submit\"]")).click();
+	
+		
+		driver.findElement(By.xpath("//button[@type=\"submit\"]")).click();
+		driver.findElement(By.xpath("//button[@type=\"submit\"]")).click();
+		driver.findElement(By.xpath("//button[@type=\"submit\"]")).click();
+		driver.findElement(By.xpath("//button[@type=\"submit\"]")).click();
+
+//		Actions actions= new Actions (driver);
+		Thread.sleep(6000);
+	    Alert alert=driver.switchTo().alert();
+	
+		
+		System.out.println( alert.getText());
+		
+		
+		
+	}
+	
+	
+	
+}

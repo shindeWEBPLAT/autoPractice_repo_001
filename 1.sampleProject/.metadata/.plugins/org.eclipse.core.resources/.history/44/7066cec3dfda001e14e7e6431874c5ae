@@ -1,0 +1,32 @@
+package practice;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class we2 {
+
+	public static void main(String[] args) {
+		
+		System.setProperty("webdriver.chrome.driver", "D:\\10.Automation\\1.sampleProject\\DemoProject\\src\\main\\resources\\chromedriver.exe");
+		WebDriver driver= new ChromeDriver();
+		driver.manage().window().maximize();
+		driver.get("https://paytrailplus.com/");
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	}
+	
+	
+	
+}
